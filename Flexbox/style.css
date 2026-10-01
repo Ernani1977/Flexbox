@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+body {
+    background-color: #b1b1b1;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Container Principal estruturado em coluna */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    gap: 15px; /* Espaçamento vertical entre os blocos */
+}
+
+/* Estilização comum para Header, Footer e Sidebar */
+.header, .footer, .sidebar, .main-content, .item {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(241, 239, 239, 0.15);
+}
+
+.header, .footer {
+    background-color: #686c74; /* Azul */
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+/* Container que junta a Main e a Sidebar lado a lado */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px; /* Espaçamento entre main e sidebar */
+}
+
+/* Bloco Principal (Verde) */
+.main-content {
+    background-color: #1f2020; /* Verde claro */
+    flex: 3; /* Ocupa 3 partes do espaço disponível */
+    padding: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Grid de itens internos usando Flexbox com quebra */
+.items-group {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+    gap: 15px; /* Espaço entre os itens */
+}
+
+/* Cada quadradinho individual (Verde escuro) */
+.item {
+    background-color: #4e504f; /* Verde escuro */
+    flex: 1 1 calc(25% - 12px); /* Base de 4 itens por linha menos o gap */
+    min-width: 100px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sidebar (Vermelha) */
+.sidebar {
+    background-color: #5a5858; /* Vermelho */
+    flex: 1; /* Ocupa 1 parte do espaço disponível */
+    padding: 20px;
+    font-size: 1.2rem;
+}
